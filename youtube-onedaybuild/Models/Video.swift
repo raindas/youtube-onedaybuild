@@ -38,7 +38,7 @@ struct Video : Decodable{
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
         //Parse title
-        self.title = try snippetContainer.decode(String.self, forKey: .snippet)
+        self.title = try snippetContainer.decode(String.self, forKey: .title)
         
         // parse description
         self.description = try snippetContainer.decode(String.self, forKey: .description)
